@@ -1,4 +1,4 @@
-Object Oriented Ship Battling, Ahem Programming
+Object Oriented Ship Battling
 ===============================================
 
 Teaching project, created for understanding new principes of coding, testing new features and learning new things.
