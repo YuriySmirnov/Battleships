@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Created by Yuriy Smirnov
+ *
+ * Web: http://yuriysmirnov.ru
+ * Email: yosmirn@gmail.com
+ * Date: 16.10.2017
+ */
+class PdoShipStorage
+{
+    private $pdo;
+
+    public function __construct(PDO $pdo)
+    {
+        $this->pdo = $pdo;
+    }
+
+    public function fetchAllShipsData(){
+        $pdo = $this->pdo;
+
+        $statement = $pdo->prepare('SELECT * FROM ship');
+        $statement->execute();
+        $shipsArray = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $shipsArray;
+    }
+
+    public function fetchSingeShipData($id){
+        $pdo = $this->pdo;
+
+        $statement = $pdo->prepare('SELECT * FROM ship WHERE id = :id');
+        $statement->execute(array('id' => $id));
+        $shipArray = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if (!$shipArray){
+            return null;
+        }
+
+        return $shipArray;
+    }
+}

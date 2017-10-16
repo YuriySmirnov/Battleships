@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
  */
 $databaseName = 'oo_battle';
 $databaseUser = 'root';
-$databasePassword = '*12qp901';
+$databasePassword = null;
 
 /*
  * CREATE THE DATABASE
