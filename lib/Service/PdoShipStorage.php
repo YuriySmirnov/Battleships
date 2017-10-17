@@ -7,7 +7,7 @@
  * Email: yosmirn@gmail.com
  * Date: 16.10.2017
  */
-class PdoShipStorage
+class PdoShipStorage extends AbstractShipStorage
 {
     private $pdo;
 
@@ -26,7 +26,7 @@ class PdoShipStorage
         return $shipsArray;
     }
 
-    public function fetchSingeShipData($id){
+    public function fetchSingleShipData($id){
         $pdo = $this->pdo;
 
         $statement = $pdo->prepare('SELECT * FROM ship WHERE id = :id');
