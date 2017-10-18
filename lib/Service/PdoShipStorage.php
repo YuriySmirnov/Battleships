@@ -7,7 +7,7 @@
  * Email: yosmirn@gmail.com
  * Date: 16.10.2017
  */
-class PdoShipStorage extends AbstractShipStorage
+class PdoShipStorage implements ShipStorageInterface
 {
     private $pdo;
 
