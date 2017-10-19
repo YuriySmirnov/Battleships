@@ -12,7 +12,7 @@ class BattleResult
     private $winningShip;
     private $losingShip;
 
-    public function __construct($useJediPower, AbstractShip $winningShip, AbstractShip $losingShip)
+    public function __construct($useJediPower, AbstractShip $winningShip = null, AbstractShip $losingShip = null)
     {
         $this->useJediPower = $useJediPower;
         $this->winningShip  = $winningShip;

@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 require __DIR__ . '/bootstrap.php';
 
 $container = new Container($configuration);
@@ -33,7 +36,9 @@ if ($ship1Quantity <= 0 || $ship2Quantity <= 0) {
 
 $battleManager = $container->getBattleManager();
 
-$battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Quantity);
+$battleType = $_POST['battle_type'];
+
+$battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Quantity, $battleType);
 ?>
 
 <html>
