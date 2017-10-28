@@ -14,7 +14,7 @@ $brokenShip = new BrokenShip('I am so broken');
 $ships[] = $brokenShip;
 
 
-$battleTypes = BattleManager::getAllBattleTypesWithDescription();
+$battleTypes = Battle\BattleManager::getAllBattleTypesWithDescription();
 
 $errorMessage = '';
 if (isset($_GET['error'])) {

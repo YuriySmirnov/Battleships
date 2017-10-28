@@ -1,4 +1,7 @@
 <?php
+
+namespace Battle;
+
 class BattleManager
 {
     const TYPE_NORMAL = 'normal';
