@@ -2,6 +2,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+use Service\BattleManager;
+use Service\Container;
+use Model\BrokenShip;
+
 require __DIR__ . '/bootstrap.php';
 
 
@@ -14,7 +18,7 @@ $brokenShip = new BrokenShip('I am so broken');
 $ships[] = $brokenShip;
 
 
-$battleTypes = Battle\BattleManager::getAllBattleTypesWithDescription();
+$battleTypes = BattleManager::getAllBattleTypesWithDescription();
 
 $errorMessage = '';
 if (isset($_GET['error'])) {

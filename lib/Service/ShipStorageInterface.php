@@ -7,6 +7,8 @@
  * Date: 17.10.17
  */
 
+namespace Service;
+
 interface ShipStorageInterface
 {
     /**

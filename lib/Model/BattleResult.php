@@ -6,6 +6,9 @@
  * Email: yosmirn@gmail.com
  * Date: 18.09.17
  */
+
+namespace Model;
+
 class BattleResult
 {
     private $useJediPower;

@@ -6,6 +6,9 @@
  * Email: yosmirn@gmail.com
  * Date: 12.10.17
  */
+
+namespace Model;
+
 class BrokenShip extends AbstractShip
 {
     public function getJediFactor(){

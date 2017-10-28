@@ -6,6 +6,8 @@
  * Date: 04.10.17
  */
 
+namespace Model;
+
 abstract class AbstractShip{
 
     private $id;

@@ -6,6 +6,9 @@
  * Email: yosmirn@gmail.com
  * Date: 01.10.17
  */
+
+namespace Model;
+
 class RebelShip extends AbstractShip
 {
 

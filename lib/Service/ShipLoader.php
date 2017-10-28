@@ -6,6 +6,13 @@
  * Email: yosmirn@gmail.com
  * Date: 18.09.17
  */
+
+namespace Service;
+
+use Model\RebelShip;
+use Model\Ship;
+use Model\AbstractShip;
+
 class ShipLoader
 {
 

@@ -4,6 +4,8 @@ ini_set('display_errors', 1);
 
 require __DIR__ . '/bootstrap.php';
 
+use Service\Container;
+
 $container = new Container($configuration);
 
 $shipsLoader = $container->getShipLoader();

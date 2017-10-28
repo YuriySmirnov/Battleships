@@ -7,6 +7,9 @@
  * Email: yosmirn@gmail.com
  * Date: 16.10.2017
  */
+
+namespace Service;
+
 class PdoShipStorage implements ShipStorageInterface
 {
     private $pdo;

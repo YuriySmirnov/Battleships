@@ -6,6 +6,9 @@
  * Email: yosmirn@gmail.com
  * Date: 27.09.17
  */
+
+namespace Service;
+
 class Container
 {
 
