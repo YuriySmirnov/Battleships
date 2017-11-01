@@ -31,8 +31,9 @@ class ShipLoader
     {
         try{
             $shipsData = $this->shipStorage->fetchAllShipsData();
-        } catch (\Exception $e){
-            trigger_error('Exeption!' . $e->getMessage());
+        } catch (\PDOException $e){
+            
+            trigger_error('Database Exeption!' . $e->getMessage());
             $shipsData = [];
         }
 
