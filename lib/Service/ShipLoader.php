@@ -12,6 +12,7 @@ namespace Service;
 use Model\RebelShip;
 use Model\Ship;
 use Model\AbstractShip;
+use Model\ShipCollection;
 
 class ShipLoader
 {
@@ -25,7 +26,7 @@ class ShipLoader
     }
 
     /**
-     * @return AbstractShip[]
+     * @return ShipCollection
      */
     public function getShips()
     {
@@ -37,11 +38,12 @@ class ShipLoader
             $shipsData = [];
         }
 
+        $ships = [];
         foreach ($shipsData as $shipData){
             $ships[] = $this->createShipFromData($shipData);
         }
 
-        return $ships;
+        return new ShipCollection($ships);
     }
 
     private function createShipFromData(array $shipData){
